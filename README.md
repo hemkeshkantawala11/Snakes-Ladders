@@ -1,8 +1,8 @@
-# 🐍🪜 Snake and Ladder Game
+# Snake and Ladder Game
 
 A comprehensive console-based Snake and Ladder game implemented in Java with advanced features and Object-Oriented Design principles.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Game Rules](#game-rules)
@@ -14,7 +14,7 @@ A comprehensive console-based Snake and Ladder game implemented in Java with adv
 - [Advanced Features](#advanced-features)
 - [Example Gameplay](#example-gameplay)
 
-## ✨ Features
+## Features
 
 ### Core Game Features
 - **Dynamic Board Size**: Customizable n×n board (user-defined)
@@ -41,7 +41,7 @@ A comprehensive console-based Snake and Ladder game implemented in Java with adv
 - **Informative Messages**: Clear feedback for snakes, ladders, special rules, and game events
 - **Input Validation**: Robust error handling for all user inputs
 
-## 🎮 Game Rules
+## Game Rules
 
 ### Basic Movement
 1. Players start at position 1
@@ -51,12 +51,12 @@ A comprehensive console-based Snake and Ladder game implemented in Java with adv
 5. First player to reach the final cell wins
 
 ### Special Rules
-- **🎲 Extra Turn**: Rolling a 6 grants an additional turn
-- **⚠️ Three 6s Penalty**: Rolling 3 consecutive 6s sends you back to position 1
-- **👢 KickOut**: Landing on another player's position sends them back to start
-- **🎯 Exact Win**: Must land exactly on the final cell to win (no overshooting)
+- **Extra Turn**: Rolling a 6 grants an additional turn
+- **Three 6s Penalty**: Rolling 3 consecutive 6s sends you back to position 1
+- **KickOut**: Landing on another player's position sends them back to start
+- **Exact Win**: Must land exactly on the final cell to win (no overshooting)
 
-## 🏗️ Architecture
+## Architecture
 
 The project follows **SOLID principles** and implements several design patterns:
 
@@ -86,7 +86,7 @@ Rule interface → ExtraTurnRule, ConsecutiveSixRule, KickOutRule, ExactWinRule
 - **DiceSet**: Handles multiple dice configuration
 - **PlayerFactory**: Creates players using Factory pattern
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Java 8 or higher
@@ -110,7 +110,7 @@ Rule interface → ExtraTurnRule, ConsecutiveSixRule, KickOutRule, ExactWinRule
    java Main
    ```
 
-## 🎯 How to Play
+## How to Play
 
 ### Game Setup
 1. **Board Size**: Enter `n` for an n×n board (e.g., 10 for 10×10 = 100 cells)
@@ -123,7 +123,7 @@ Rule interface → ExtraTurnRule, ConsecutiveSixRule, KickOutRule, ExactWinRule
 ### During Gameplay
 - **Random Mode**: Press Enter when prompted to roll dice
 - **Manual Mode**: Enter dice numbers (1-6) when prompted
-- Watch for snakes 🐍, ladders 🪜, and special rule messages
+- Watch for snakes, ladders, and special rule messages
 - First to reach the final cell wins! 🏆
 
 ### Example Session
@@ -148,7 +148,7 @@ Human1 rolled [4] -> landed on 5
 Human1 final position: 5
 ```
 
-## 🎨 Design Patterns Used
+## Design Patterns Used
 
 ### 1. **Strategy Pattern**
 - `BotStrategy` interface with `RandomBotStrategy`
@@ -170,7 +170,7 @@ Human1 final position: 5
 - `GameEngine` orchestrates the game flow
 - Consistent turn structure with varied implementations
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 snakeladder/
@@ -204,7 +204,7 @@ snakeladder/
 └── ExactWinRule.java   # Exact landing win condition
 ```
 
-## 🔥 Advanced Features
+## Advanced Features
 
 ### 1. **Anti-Cycle Entity Generation**
 - Prevents infinite loops in snake/ladder chains
@@ -229,7 +229,7 @@ rules = [ExactWinRule, KickOutRule, ConsecutiveSixRule, ExtraTurnRule]
 - Range checking (1-6 for dice, 2-6 for players)
 - Graceful error handling with retry prompts
 
-## 🎬 Example Gameplay
+## Example Gameplay
 
 ```
 Human1's turn
@@ -256,7 +256,7 @@ Human1 is at 1
 Human2 is at 23
 ```
 
-## 🛠️ Future Enhancements
+## Future Enhancements
 
 - **GUI Interface**: Java Swing/JavaFX implementation
 - **Network Multiplayer**: Socket-based multiplayer support
@@ -265,7 +265,7 @@ Human2 is at 23
 - **Statistics Tracking**: Player performance analytics
 - **Save/Load Game**: Game state persistence
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
@@ -273,11 +273,11 @@ Human2 is at 23
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🏆 Acknowledgments
+## Acknowledgments
 
 - Implements classic Snake and Ladder game rules
 - Demonstrates advanced Java OOP concepts
@@ -286,4 +286,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Enjoy the game! 🎮** May the dice be ever in your favor! 🎲
+**Enjoy the game!** May the dice be ever in your favor!
