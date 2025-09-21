@@ -3,7 +3,7 @@
 A comprehensive console-based Snake and Ladder game implemented in Java with advanced features and Object-Oriented Design principles.
 
 ## Table of Contents
-
+- UML Class Diagram
 - [Features](#features)
 - [Game Rules](#game-rules)
 - [Architecture](#architecture)
@@ -13,6 +13,10 @@ A comprehensive console-based Snake and Ladder game implemented in Java with adv
 - [Project Structure](#project-structure)
 - [Advanced Features](#advanced-features)
 - [Example Gameplay](#example-gameplay)
+
+
+## UML Class Diagram
+
 
 ## Features
 
