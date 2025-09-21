@@ -50,70 +50,63 @@ public class Board {
     public void generateRandomEntities() {
         int entityCount = size - 3; 
         
-        // Generate snakes
         for (int i = 0; i < entityCount; i++) {
             generateRandomSnake();
         }
         
-        // Generate ladders
         for (int i = 0; i < entityCount; i++) {
             generateRandomLadder();
         }
     }
 
     private void generateRandomSnake() {
-        int maxAttempts = 100; // Prevent infinite loops
+        int maxAttempts = 100; 
         for (int attempt = 0; attempt < maxAttempts; attempt++) {
-            // Snake start should be in upper part of board (at least from row 2)
             int minStart = size + 2; // At least second row
             int maxStart = winningCell - 2; // Not on the last row
             int start = random.nextInt(maxStart - minStart + 1) + minStart;
             
-            // Snake end should be lower than start (at least 5 cells down)
             int minEnd = 2;
             int maxEnd = Math.min(start - 5, winningCell - 1);
             
-            if (maxEnd < minEnd) continue; // Skip if no valid end position
+            if (maxEnd < minEnd) continue; 
             
             int end = random.nextInt(maxEnd - minEnd + 1) + minEnd;
             
-            // Check if positions are valid and not occupied
             if (!entities.containsKey(start) && !entities.containsKey(end) && 
                 start != end && !wouldCreateCycle(start, end)) {
                 try {
                     addSnake(new Snake(start, end));
-                    return; // Successfully added snake
+                    return;
                 } catch (IllegalArgumentException e) {
-                    // Continue trying if validation fails
                 }
             }
         }
     }
 
     private void generateRandomLadder() {
-        int maxAttempts = 100; // Prevent infinite loops
+        int maxAttempts = 100;
         for (int attempt = 0; attempt < maxAttempts; attempt++) {
             // Ladder start should be in lower part of board
             int minStart = 2;
-            int maxStart = winningCell - size - 2; // Not too close to end
+            int maxStart = winningCell - size - 2; 
             int start = random.nextInt(maxStart - minStart + 1) + minStart;
             
-            // Ladder end should be higher than start (at least 5 cells up)
+            
             int minEnd = start + 5;
             int maxEnd = winningCell - 1;
             
-            if (minEnd > maxEnd) continue; // Skip if no valid end position
+            if (minEnd > maxEnd) continue; 
             
             int end = random.nextInt(maxEnd - minEnd + 1) + minEnd;
             
-            // Check if positions are valid and not occupied
+            
             if (!entities.containsKey(start) && !entities.containsKey(end) && 
                 start != end && !wouldCreateCycle(start, end)) {
                 try {
                     addLadder(new Ladder(start, end));
-                    return; // Successfully added ladder
+                    return; 
                 } catch (IllegalArgumentException e) {
-                    // Continue trying if validation fails
                 }
             }
         }
@@ -127,7 +120,7 @@ public class Board {
             visited.add(current);
             current = entities.get(current).getEnd();
             if (current == start) {
-                return true; // Cycle detected
+                return true; 
             }
         }
         return false;

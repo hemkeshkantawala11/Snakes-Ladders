@@ -19,4 +19,8 @@ public class DiceSet {
         }
         return results;
     }
+
+    public int getDiceCount() {
+        return diceList.size();
+    }
 }
